@@ -5,6 +5,41 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: 'Gatsby Tutorial',
+    description: 'Some random description',
+    author: 'Glenn Law',
+    data: ['item 1', 'item 2'],
+    person: {
+      name: 'peter',
+      age: '22',
+    },
+  },
+
+  plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `401o1b0tb4om`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `BWnstQkbNAcld0X_ecH63YeAU5gXaVzL-sJ_KEmeEGY`,
+      },
+    },
+  ],
 }

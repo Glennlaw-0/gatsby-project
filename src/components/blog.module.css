@@ -1,0 +1,12 @@
+.page {
+  background-color: black;
+}
+
+.page h1 {
+  color: greenyellow;
+}
+
+.text {
+  text-transform: uppercase;
+  color: white;
+}

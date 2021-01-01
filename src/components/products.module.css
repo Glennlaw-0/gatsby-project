@@ -1,0 +1,33 @@
+.pages {
+  width: 90vw;
+  max-width: 1170px;
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+
+.pages div {
+  height: 15rem;
+}
+
+.pages article {
+  margin: 2rem 0;
+}
+
+.price {
+  margin-left: 2rem;
+  color: grey;
+}
+
+@media screen and (min-width: 768px) {
+  .pages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pages {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
