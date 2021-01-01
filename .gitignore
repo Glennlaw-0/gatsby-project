@@ -57,9 +57,14 @@ typings/
 # gatsby files
 .cache/
 public
+gatsby-config.js
 
 # Mac files
 .DS_Store
+
+#lock files
+yarn.lock
+package-lock.json
 
 # Yarn
 yarn-error.log
